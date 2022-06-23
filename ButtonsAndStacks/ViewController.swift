@@ -20,6 +20,20 @@ class ViewController: UIViewController {
 
     @IBAction func colorButtonPressed(_ sender: UIButton) {
         print("You clicked tag #: \(sender.tag)")
+        
+        if sender.tag >= 0 && sender.tag <= 6 {
+            colorLabel.text = "You clicked \(sender.currentTitle!)"
+            colorLabel.textColor = colors[sender.tag]        }
+     else {
+         colorLabel.text = ""     }
+        
+        
+//        if sender.tag == 1000 {
+//            colorLabel.text = ""
+//        }else{
+//            colorLabel.text = "You clicked \(sender.currentTitle!)"
+//            colorLabel.textColor = colors[sender.tag]        }
+                
     }
     
 }
